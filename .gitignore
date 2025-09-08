@@ -1,0 +1,18 @@
+﻿# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env
+
+# Flask/instance
+instance/
+*.db
+
+# IDE
+.vscode/
+*.idea/
+
+# QR-codes (indien je ze niet in repo wil)
+static/qrcodes/
