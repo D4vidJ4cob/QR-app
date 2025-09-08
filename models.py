@@ -5,7 +5,6 @@ class Kweek(db.Model):
     __tablename__ = "kweek"
 
     uniekeID = db.Column(db.Integer, primary_key=True)
-    soort = db.Column(db.String(50))
 
     # Relatie: één Kweek kan meerdere LiquidCultuur hebben
     liquid_cultures = db.relationship('LiquidCultuur', backref='kweek', lazy=True)
@@ -15,6 +14,7 @@ class LiquidCultuur(db.Model):
 
     liquidcultuurID = db.Column(db.Integer, primary_key=True, nullable=False)
     kweekID = db.Column(db.Integer, db.ForeignKey('kweek.uniekeID'), nullable=False)
+    soort = db.Column(db.String(50), nullable=False)
     innoculatiedatum = db.Column(db.Date, default=date.today)
     kenmerk = db.Column(db.String(50))
 
