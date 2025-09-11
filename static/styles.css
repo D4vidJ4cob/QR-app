@@ -1,4 +1,7 @@
 body {
-  background-color: wheat;
-  text-align: center;
+  background-color: antiquewhite;
 }/*# sourceMappingURL=styles.css.map */
+
+label, input {
+    display: block;
+}

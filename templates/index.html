@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+    <title>Homepage</title>
 {% endblock %}
 
 {% block body %}
@@ -10,7 +10,9 @@
         <p> Track your whole growing process with QR-codes </p>
 
         <div class="action">
-            <button type="button"> New Liquid Culture </button>
+            <a href="{{ url_for('add_liquid_culture') }}">
+                <button type="button"> New Liquid Culture </button>
+            </a>
         </div>
     </div>
 {% endblock %}
