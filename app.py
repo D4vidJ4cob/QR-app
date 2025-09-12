@@ -65,9 +65,10 @@ def display_liquid_culture(id):
 
     return render_template("display_liquid_culture.html", liquid_culture=liquid_culture)
 
-# @app.route('/add_grain_spawn', methods=["POST", "GET"])
-# def add_grain_spawn():
-#     if request.method == "POST":
+@app.route('/add_grain_spawn/<int:liquid_culture_id', methods=["POST", "GET"])
+def add_grain_spawn():
+    if request.method == "POST":
+        #TODO
 
 if __name__ == "__main__":
     with app.app_context():
