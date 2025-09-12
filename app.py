@@ -59,6 +59,12 @@ def add_liquid_culture():
 
     return render_template("add_liquid_culture.html")
 
+@app.route("/liquid_culture/<int:id>", methods=["POST","GET"])
+def display_liquid_culture(id):
+    liquid_culture = LiquidCultuur.query.get_or_404(id)
+
+    return render_template("display_liquid_culture.html", liquid_culture=liquid_culture)
+
 # @app.route('/add_grain_spawn', methods=["POST", "GET"])
 # def add_grain_spawn():
 #     if request.method == "POST":

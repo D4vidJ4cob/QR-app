@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Liquid Culture</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Details of the Liquid Culture</h1>
+        <p>Soort: {{ liquid_culture.soort }}</p>
+        <p>Kenmerk: {{ liquid_culture.kenmerk }}</p>
+        <p>Unieke ID: {{ liquid_culture.uniekeID }}</p>
+        <p>Liquid Cultuur ID: {{ liquid_culture_liquidcultuurID }}</p>
+
+        <a href="{{ url_for('add_grain_spawn', liquid_culture_id= liquid_culture.liquidcultuurID) }}">
+            <button type="button">New Grain Spawn</button>
+        </a>
+    </div>
+{% endblock %}
