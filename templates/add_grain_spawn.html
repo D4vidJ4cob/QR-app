@@ -8,19 +8,25 @@
     <div class="container">
         <h1>Add a new Grain Spawn</h1>
 
-        <form method="POST" action="{{ url_for('add_grain_spawn') }}">
+        <form method="POST" action="{{ url_for('add_grain_spawn',  liquid_culture_id=liquid_culture_id) }}">
             <div class="form-group">
-                <label for="contaminatie">is there any contamination?</label>
-                <input type="text" name="contaminatie" id="contaminatie">
+                <label for="contaminatie">Is there any contamination?</label>
+                <select name="contaminatie" id="contaminatie">
+                    <option value="nee" selected>Nee</option>
+                    <option value="ja">Ja</option>
+                </select>
             </div>
 
             <div class="form-group">
-                <label for="geschud">has the bag been shaken at 20%?</label>
-                <input type="text" name="geschud" id="geschud">
+                <label for="geschud">Has the bag been shaken at 20%?</label>
+                <select name="geschud" id="geschud">
+                    <option value="nee" selected>Nee</option>
+                    <option value="ja">Ja</option>
+                </select>
             </div>
 
             <input type="hidden" value="{{ liquid_culture_id }}" 
-                        name="liquidcultureID" id="liquidcultureID">
+                        name="liquidcultuurID" id="liquidcultuurID">
                         
             <button type="submit">Submit</button>
         </form>

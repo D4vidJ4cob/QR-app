@@ -8,11 +8,11 @@
     <div class="container">
         <h1>Details of the Liquid Culture</h1>
         <p>Soort: {{ liquid_culture.soort }}</p>
+        <p>Datum: {{ liquid_culture.innoculatiedatum }}</p>
         <p>Kenmerk: {{ liquid_culture.kenmerk }}</p>
-        <p>Unieke ID: {{ liquid_culture.uniekeID }}</p>
-        <p>Liquid Cultuur ID: {{ liquid_culture_liquidcultuurID }}</p>
+        <p>Liquid Cultuur ID: {{ liquid_culture.liquidcultuurID }}</p>
 
-        <a href="{{ url_for('add_grain_spawn', liquid_culture_id= liquid_culture.liquidcultuurID) }}">
+        <a href="{{ url_for('add_grain_spawn', liquid_culture_id=liquid_culture.liquidcultuurID) }}">
             <button type="button">New Grain Spawn</button>
         </a>
     </div>
